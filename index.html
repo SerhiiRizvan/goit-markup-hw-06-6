@@ -363,19 +363,34 @@
         </button>
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
         <form action="#">
-          <label class="input-text" for="user-name">Ім'я</label>
-          <input
-            class="form-input"
-            type="text"
-            name="user-name"
-            required
-            minlength="2"
-            id="user-name"
-          />
-          <label for=""></label>
-          <input class="form-input" type="email" name="user-email" required />
-          <label for=""></label>
-          <input class="form-input" type="tel" name="user-tel" required />
+          <div class="form-field">
+            <label class="input-text" for="user-name">Ім'я</label>
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              required
+              minlength="2"
+              id="user-name"
+            />
+          </div>
+          <div class="form-field">
+            <label class="input-text" for="user-email">Телефон</label>
+            <input class="form-input" type="email" name="user-email" required id="user-email" />
+          </div>
+          <div class="form-field">
+            <label class="input-text" for="user-tel">Пошта</label>
+            <input class="form-input" type="tel" name="user-tel" required id="user-tel" />
+          </div>
+          <div class="form-field">
+            <label class="input-text" for="user-text">Коментар</label>
+            <textarea
+              class="form-text"
+              name="user-text"
+              id="user-text"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
           <button type="submit" class="form-button">Відправити</button>
         </form>
       </div>
