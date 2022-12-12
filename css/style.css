@@ -458,11 +458,11 @@ margin-right: 30px;
 
 .footer-wrap {
     display: flex;
+    justify-content: space-between;
     align-items: baseline;
 }
 
 .address-wrap {
-    margin-right: 70px;
 }
 
 .footer-logo {
@@ -565,6 +565,57 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .footer-social-icon {
 fill: #FFFFFF;
+}
+
+.title-sent {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.sent-wrap {
+    display: flex;
+
+}
+
+.input-sent {
+    width: 358px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-right: 12px;
+    outline: none;
+    padding: 0 16px;
+}
+
+.input-sent::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button-sent {
+    padding: 0 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: #FFFFFF;
+    background-color: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
 }
 
 /* ---------portfolio---------- */
@@ -724,6 +775,10 @@ transform: translate(-50%, -50%) scale(0.5)
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
     fill: #188CE8;
@@ -758,13 +813,34 @@ margin-bottom: 10px;
     margin-bottom: 4px;
 }
 
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-input {
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    padding-left: 15px;
-    
+    padding-left: 42px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: #2196F3;
+}
+
+.form-input:focus + .input-icon {
+    fill: #2196F3;
 }
 
 .form-text {
@@ -774,6 +850,8 @@ margin-bottom: 10px;
     border-radius: 4px;
     padding: 12px 16px;
     resize: none;
+    outline: none;
+    border-color: #2196F3;
 }
 
 .form-text::placeholder {
